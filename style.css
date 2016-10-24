@@ -1,0 +1,31 @@
+
+* {
+  display: flex-box;
+  flex-direction: column;
+}
+body {
+  background: whitesmoke;
+  margin:auto;;
+  border: auto
+  ;
+}
+p {
+  display: block;
+  text-align: center;
+}
+button {
+  padding: 5px 10px;
+  background: grey;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: : 50px;
+}
+label {
+  align-items: center;
+}
+.marvel {
+  color: blue;
+}
+.dc {
+  color: red;
+}

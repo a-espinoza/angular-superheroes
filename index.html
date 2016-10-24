@@ -9,6 +9,23 @@
 </head>
 <body ng-controller="superheroesCtrl as vm">
 
+  <div ng-repeat="superhero in vm.superheroes | filter: {affiliation: 'Marvel'}">
+    <p ng-class="marvel">
+      {{$index + 1}}. {{superhero.name }} - {{superhero.marvel}} <br>
+      {{ superhero.affiliation }} <br>
+      {{ superhero.phone }} <br>
+      <img ng-src="{{superhero.image_url}}">
+    </p>
+  </div>
+  <h2>Add Superhero</h2>
+  <div class="inputing">
+    Name:<input type="text"placeholder="name" ng-model="vm.newSuperhero.name">
+    Affiliation: <input type="text"placeholder="affiliation" ng-model="vm.newSuperhero.affiliation">
+    Phone Number:<input type="integer"placeholder="nuumber" ng-model="vm.newSuperhero.phone">
+    Image:<input type="text"placeholder="image_url" ng-model="vm.newSuperhero.image_url">
+    <button ng-click="vm.addSuperhero()"> Add Superhero</button>
+
+  </div>
 
 </body>
 </html>
